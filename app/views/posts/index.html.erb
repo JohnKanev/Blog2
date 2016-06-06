@@ -2,26 +2,25 @@
 
 </style>
 <header class="container" align="center">
-  <h3> Blogr</h3>
-    <p>Hey man whats up welcome to the most hip blog ovar!!!</p>
+  <h3> TwtR</h3>
+    <p>Hey man whats up welcome to the most hip site evar!!!</p>
 <div class="visible-xs"><p href="http://thecatapi.com"><img height="300" width="100%" src="http://thecatapi.com/api/images/get?format=src&type=gif"></p></div>
 <p> <%= link_to "New Post", new_post_path , class:"btn btn-primary btn-large"%></a></p>
 </header>
 <hr>
 
 
-<div class="container" id="post">
-  <div class="row">
-<% @posts.each do |post| %>
 
+<% @posts.each_slice(3) do |postz| %>
+    <div class="row">
+      <% postz.each do |post| %>
       <div class="col-sm-4">
-<h2><%= post.title %></h2>
-<p>
-  <%= truncate(post.body, :length=>100) %>
-</p><br>
-<%= link_to "Read Post", post ,:class => "btn btn-default"%>
-  </div>
-
+        <h2><%= post.title %></h2>
+        <p>
+        <%= truncate(post.body,   :length=>100) %>
+        </p><br>
+        <%= link_to "Read Post", post ,:class => "btn btn-default"%>
+      </div>
+      <% end %>
+    </div>
 <% end %>
-</div>
-</div>
