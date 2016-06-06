@@ -1,5 +1,15 @@
 
-<div class="container">
+<header class="container" align="center">
+  <h3> Blogr</h3>
+    <p>Hey man whats up welcome to the most hip blog ovar!!!</p>
+<p href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></p>
+    <p> <%= link_to "New Post", new_post_path , class:"btn btn-primary btn-large"%></a>
+    </p>
+</header>
+<hr>
+
+
+<div class="container" id="post">
   <div class="row">
 <% @posts.each do |post| %>
 
