@@ -1,7 +1,7 @@
-== A simple Blog
+== A simple twitter clone
 
 * Made with Ruby on Rails
 
-* First blog ever
+* First twitter clone ever
 
 * Hear me RoR
